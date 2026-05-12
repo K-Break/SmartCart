@@ -32,6 +32,10 @@
   --color-input-border: rgba(0, 0, 0, 0.1);
   --color-input-focus: #111111;
 
+  /* Brand Colors */
+  --color-brand-green: #22B937;
+  --color-brand-blue: #0233C9;
+
   /* Typography */
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -82,6 +86,9 @@
   --color-input-bg: #1c1c28;
   --color-input-border: rgba(255, 255, 255, 0.1);
   --color-input-focus: #ffffff;
+
+  --color-brand-green: #22B937;
+  --color-brand-blue: #4D7BFF;
 }
 
 /* Reset */
@@ -232,10 +239,26 @@ button {
   font-weight: 500;
   color: var(--color-text-secondary);
   transition: var(--transition-fast);
+  position: relative;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-brand-green);
+  transition: width var(--transition-fast);
 }
 
 .navbar-links a:hover {
-  color: var(--color-text-primary);
+  color: var(--color-brand-blue);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
 }
 
 .navbar-cta {
@@ -250,8 +273,9 @@ button {
 }
 
 .navbar-cta:hover {
-  background: var(--color-surface);
-  border-color: var(--color-border-hover);
+  background: var(--color-brand-blue);
+  color: #ffffff;
+  border-color: var(--color-brand-blue);
   transform: translateY(-1px);
 }
 
@@ -339,7 +363,7 @@ button {
 }
 
 .hero-title .accent {
-  color: var(--color-accent-soft);
+  color: var(--color-brand-blue);
 }
 
 .hero-description {
@@ -373,8 +397,9 @@ button {
 }
 
 .btn-primary:hover {
-  background: var(--color-btn-primary-hover);
+  background: var(--color-brand-blue);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(2, 51, 201, 0.25);
 }
 
 .btn-secondary {
@@ -392,7 +417,8 @@ button {
 }
 
 .btn-secondary:hover {
-  border-color: var(--color-text-primary);
+  border-color: var(--color-brand-green);
+  color: var(--color-brand-green);
   transform: translateY(-2px);
 }
 
@@ -518,9 +544,9 @@ button {
 }
 
 .step-card:hover .step-number {
-  background: var(--color-btn-primary-bg);
-  color: var(--color-btn-primary-text);
-  border-color: var(--color-btn-primary-bg);
+  background: var(--color-brand-blue);
+  color: #ffffff;
+  border-color: var(--color-brand-blue);
 }
 
 .step-title {
@@ -883,6 +909,11 @@ button {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-text-muted);
+  transition: color var(--transition-base);
+}
+
+.concept-item:hover .concept-item-num {
+  color: var(--color-brand-blue);
 }
 
 .concept-item-content {
@@ -923,6 +954,7 @@ button {
 
 .matrix-item:hover {
   background: var(--color-surface);
+  border-bottom-color: var(--color-brand-green);
 }
 
 .matrix-item-title {
@@ -951,6 +983,11 @@ button {
 .rse-minimal-item {
   border-top: 2px solid var(--color-text-primary);
   padding-top: 24px;
+  transition: border-color var(--transition-base);
+}
+
+.rse-minimal-item:hover {
+  border-top-color: var(--color-brand-blue);
 }
 
 .rse-minimal-title {

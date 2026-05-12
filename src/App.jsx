@@ -54,7 +54,7 @@ function Navbar({ theme, toggleTheme }) {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
       <div className="navbar-inner">
         <a href="#" className="navbar-logo">
-          <img src={theme === 'dark' ? "/logo-full-light.png" : "/logo-full-dark.png"} alt="SmartCart" />
+          <img src={theme === 'dark' ? "/logo-full-light.png" : "/logo-full-color.png"} alt="SmartCart" />
         </a>
         <div className="navbar-links">
           <a href="#concept">Concept</a>
@@ -487,7 +487,7 @@ function Footer({ theme }) {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <img src={theme === 'dark' ? "/logo-full-light.png" : "/logo-full-dark.png"} alt="SmartCart" />
+            <img src={theme === 'dark' ? "/logo-full-light.png" : "/logo-full-color.png"} alt="SmartCart" />
             <p>
               SmartCart réinvente l'expérience d'achat physique pour la rendre aussi fluide,
               transparente et rapide que le commerce en ligne.
