@@ -24,9 +24,9 @@
   --color-navbar-bg: rgba(255, 255, 255, 0.85);
   --color-navbar-border: rgba(0, 0, 0, 0.06);
 
-  --color-btn-primary-bg: #111111;
+  --color-btn-primary-bg: var(--color-brand-blue);
   --color-btn-primary-text: #ffffff;
-  --color-btn-primary-hover: #333333;
+  --color-btn-primary-hover: #0228a1;
 
   --color-input-bg: #f5f5f5;
   --color-input-border: rgba(0, 0, 0, 0.1);
@@ -79,9 +79,9 @@
   --color-navbar-bg: rgba(10, 10, 15, 0.85);
   --color-navbar-border: rgba(255, 255, 255, 0.06);
 
-  --color-btn-primary-bg: #ffffff;
-  --color-btn-primary-text: #111111;
-  --color-btn-primary-hover: #e0e0e0;
+  --color-btn-primary-bg: var(--color-brand-blue);
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-hover: #6b92ff;
 
   --color-input-bg: #1c1c28;
   --color-input-border: rgba(255, 255, 255, 0.1);
@@ -234,7 +234,7 @@ button {
   gap: 32px;
 }
 
-.navbar-links a {
+.navbar-links a:not(.navbar-cta) {
   font-size: 14px;
   font-weight: 500;
   color: var(--color-text-secondary);
@@ -242,7 +242,7 @@ button {
   position: relative;
 }
 
-.navbar-links a::after {
+.navbar-links a:not(.navbar-cta)::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -253,11 +253,11 @@ button {
   transition: width var(--transition-fast);
 }
 
-.navbar-links a:hover {
+.navbar-links a:not(.navbar-cta):hover {
   color: var(--color-brand-blue);
 }
 
-.navbar-links a:hover::after {
+.navbar-links a:not(.navbar-cta):hover::after {
   width: 100%;
 }
 
@@ -397,7 +397,7 @@ button {
 }
 
 .btn-primary:hover {
-  background: var(--color-brand-blue);
+  background: var(--color-btn-primary-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(2, 51, 201, 0.25);
 }
